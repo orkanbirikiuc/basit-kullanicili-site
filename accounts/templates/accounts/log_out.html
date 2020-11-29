@@ -1,0 +1,17 @@
+{% extends 'layouts/default/page.html' %}
+
+{% load i18n %}
+
+{% block content %}
+
+    <h4>{% trans 'Çıkış yapıldı' %}</h4>
+
+    <p>
+        {% trans 'Görüşürüz!' %}
+    </p>
+
+    <p>
+        <a href="{% url 'accounts:log_in' %}">{% trans 'Tekrar giriş yap' %}</a>
+    </p>
+
+{% endblock %}

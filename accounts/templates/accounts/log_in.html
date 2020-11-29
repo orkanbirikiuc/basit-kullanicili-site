@@ -1,0 +1,33 @@
+{% extends 'layouts/default/page.html' %}
+
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+    <div id="login">
+        <h4>{% trans 'Giriş yap' %}</h4>
+
+        <form method="post">
+
+            {% csrf_token %}
+            {% bootstrap_form form %}
+
+            <button class="btn btn-primary">{% trans 'Giriş yap' %}</button>
+
+        </form>
+    </div>
+    <hr>
+
+    <ul>
+        <!-- <li>
+            <a href="{% url 'accounts:restore_password' %}">{% trans 'Şifremi unuttum' %}</a>
+        </li>
+        <li>
+            <a href="{% url 'accounts:remind_username' %}">{% trans 'Kullanıcı adımı unuttum' %}</a>
+        </li>
+        <li>
+            <a href="{% url 'accounts:resend_activation_code' %}">{% trans 'Aktivasyon kodu' %}</a>
+        </li> -->
+    </ul>
+
+{% endblock %}
