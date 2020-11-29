@@ -1,0 +1,18 @@
+{% extends 'layouts/default/page.html' %}
+
+{% load i18n %}
+
+{% block content %}
+
+    {% if request.user.is_authenticated %}
+
+        {% trans 'Merhaba, ' %} <b>{{ request.user.username }}
+
+    {% else %}
+
+        <h4>{% trans 'Hoş geldin misafir,' %}</h4>
+        <p>Sağ üstteki seçeneklerden biri ile devam edebilirsin!</p>
+
+    {% endif %}
+
+{% endblock %}
